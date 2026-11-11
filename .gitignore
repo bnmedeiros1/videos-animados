@@ -1,0 +1,9 @@
+build/
+prontos/
+.previa_elenco/
+elenco.jpg
+narracao_bruta.*
+texto_narracao.txt
+__pycache__/
+*.pyc
+.DS_Store
