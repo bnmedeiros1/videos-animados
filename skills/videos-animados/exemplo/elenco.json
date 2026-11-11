@@ -1,0 +1,13 @@
+{
+  "personagens": [
+    {"funcao": "LU", "nome": "Lu", "papel": "protagonista",
+     "jeito": "confeiteira de 32 anos, sonhadora e teimosa; vende bolo pelo Instagram",
+     "visual": {"cabelo": "coque", "cor_cabelo": "#3A2316", "pele": "parda", "roupa": "camiseta", "cor_roupa": "#EC4899", "estampa": "#FFFFFF", "cilios": true, "brinco": true}},
+    {"funcao": "NEIDE", "nome": "Dona Neide", "papel": "mãe da Lu",
+     "jeito": "desconfiada, acha que Instagram é perda de tempo; vira a melhor vendedora",
+     "visual": {"cabelo": "cacheado", "cor_cabelo": "#9CA3AF", "pele": "negra", "roupa": "vestido", "cor_roupa": "#8B5CF6", "oculos": "#111827", "brinco": true, "cilios": true, "batom": true}},
+    {"funcao": "RAFA", "nome": "Rafa", "papel": "irmão mais novo",
+     "jeito": "faz as entregas de moto e filma tudo com o celular",
+     "visual": {"cabelo": "bone", "pele": "parda", "roupa": "moletom", "cor_roupa": "#2563EB", "sigla_bone": "LU"}}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "marca": {"nome": "Doce da Lu", "sigla": "LU", "perfil": "@seu.perfil", "cor": "#EC4899"},
+  "nicho": "confeitaria caseira que vende bolo e doce pelo Instagram",
+  "publico": "mulheres de 25 a 45 anos que fazem doce em casa e querem vender mais sem gastar com anúncio",
+  "oferta": "cardápio pronto + aulas de como vender doce pelo direct",
+  "tom": "leve, engraçado, de família; a protagonista erra, aprende e vira o jogo",
+  "tratamento": "tu",
+  "formato": "novela",
+  "cta": {"modelo": "Comenta {PALAVRA}, que eu te mando no direct, {ENTREGA}."},
+  "voz": {"via": "kokoro", "voice_id": "pf_dora", "velocidade": 1.1, "tempo": 1.0},
+  "idioma": "pt"
+}

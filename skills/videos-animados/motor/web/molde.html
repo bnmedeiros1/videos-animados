@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>/*__FONTES__*/</style>
+<style>
+:root{--bg:#0A0C10;--panel:#141821;--panel2:#1B202B;--line:#2A3140;--tx:#F5F7FB;--mut:#8C96AA;
+--or:#FF6A2B;--or2:#FF8A50;--gr:#22C55E;--gr2:#4ADE80;--rd:#F04444;--rd2:#F87171;--bl:#3D8BFF;--bl2:#7EB2FF;--yl:#FACC15;--pu:#A855F7}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg);font-family:Inter,sans-serif;color:var(--tx)}
+#bg{position:absolute;inset:0;overflow:hidden}
+#grid{position:absolute;left:-200px;top:-200px;width:1480px;height:2320px;
+ background-image:linear-gradient(rgba(255,255,255,.035) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.035) 2px,transparent 2px);
+ background-size:90px 90px}
+.glow{position:absolute;border-radius:50%}
+#g1{width:1300px;height:1300px;background:radial-gradient(circle,rgba(255,106,43,.22),transparent 62%)}
+#g2{width:1100px;height:1100px;background:radial-gradient(circle,rgba(61,139,255,.12),transparent 62%)}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 45%,rgba(0,0,0,.65) 100%)}
+#stage{position:absolute;inset:0;transform-origin:540px 1050px}
+#tag{position:absolute;left:80px;top:190px;opacity:0}
+#cap{position:absolute;left:80px;top:268px;width:920px;font-family:"Inter Display",Inter;font-weight:900;letter-spacing:-1.5px;line-height:1.05}
+#cap .w{display:inline-block;margin-right:.23em;opacity:0}
+#cap .h{color:var(--or)}
+#vis{position:absolute;left:0;top:770px;width:1080px;height:740px}
+.abs{position:absolute}
+.card{background:var(--panel);border:2px solid var(--line);border-radius:34px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.lbl{font:600 30px Inter;color:var(--mut)}
+.ttl{font:800 38px Inter;color:var(--tx)}
+.big{font-family:"Inter Display",Inter;font-weight:900;letter-spacing:-2px;font-variant-numeric:tabular-nums;line-height:1}
+.mono{font-family:"DejaVu Sans Mono",monospace;font-weight:700}
+.chip{display:inline-flex;align-items:center;gap:12px;padding:14px 26px;border-radius:999px;font:800 32px Inter;border:2px solid;white-space:nowrap}
+.chip.g{background:rgba(34,197,94,.14);color:var(--gr2);border-color:rgba(34,197,94,.5)}
+.chip.r{background:rgba(240,68,68,.14);color:var(--rd2);border-color:rgba(240,68,68,.55)}
+.chip.b{background:rgba(61,139,255,.14);color:var(--bl2);border-color:rgba(61,139,255,.55)}
+.chip.o{background:rgba(255,106,43,.16);color:var(--or2);border-color:rgba(255,106,43,.6)}
+.chip.y{background:rgba(250,204,21,.13);color:#FDE047;border-color:rgba(250,204,21,.5)}
+.chip.m{background:rgba(255,255,255,.05);color:var(--mut);border-color:var(--line)}
+.chip .ic{width:34px;height:34px}
+.ic svg{width:100%;height:100%;display:block}
+.icbox{display:flex;align-items:center;justify-content:center;border-radius:24px}
+.boleto{background:#F4F1E8;color:#14161C;border-radius:26px;padding:30px 40px 28px 60px;box-shadow:0 34px 80px rgba(0,0,0,.65);overflow:hidden}
+.boleto .lbl{color:#5B6170}
+.boleto .stripe{position:absolute;left:0;top:0;bottom:0;width:22px}
+.boleto .due{position:absolute;right:28px;top:26px;font:900 24px Inter;color:#fff;background:var(--rd);padding:8px 16px;border-radius:10px;letter-spacing:1px}
+.bar{height:50px;margin-top:16px;border-radius:6px;opacity:.6;
+ background:repeating-linear-gradient(90deg,#2a2e38 0 4px,transparent 4px 9px,#2a2e38 9px 11px,transparent 11px 17px,#2a2e38 17px 23px,transparent 23px 27px)}
+.day{width:112px;height:140px;border-radius:26px;background:var(--panel);border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font:800 38px Inter;color:var(--mut)}
+.day.on{background:rgba(61,139,255,.16);border-color:var(--bl);color:#fff}
+.node{display:flex;align-items:center;gap:22px;padding:30px 34px}
+.avatar{border-radius:50%;display:flex;align-items:center;justify-content:center;font:900 60px "Inter Display";color:#fff}
+.toggle{width:150px;height:84px;border-radius:999px;position:relative;background:var(--gr)}
+.toggle .k{position:absolute;top:9px;left:75px;width:66px;height:66px;border-radius:50%;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+.ticket{background:#F4F1E8;color:#14161C;border-radius:28px;padding:36px 40px;box-shadow:0 34px 80px rgba(0,0,0,.65)}
+.ticket .sep{border-top:4px dashed #c9c3b3;margin:26px -40px}
+.stamp{border-radius:50%;border:14px solid var(--or);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--or);
+ box-shadow:inset 0 0 0 10px rgba(255,106,43,.0),0 0 60px rgba(255,106,43,.35)}
+.stamp .inner{position:absolute;inset:18px;border-radius:50%;border:4px dashed rgba(255,106,43,.7)}
+.strike{position:absolute;height:14px;background:var(--rd);border-radius:8px;transform-origin:0 50%;box-shadow:0 0 30px rgba(240,68,68,.6)}
+</style><style>
+#cap.subs{left:60px;width:960px;top:262px;height:236px;display:flex;align-items:center;justify-content:center;letter-spacing:-1px;line-height:1.04;text-shadow:0 6px 26px rgba(0,0,0,.55)}
+#cap.subs .ch{display:none;text-align:center;text-wrap:balance;max-width:960px}
+#cap.subs .sw{display:inline-block;margin:0 .17em;transform-origin:50% 80%}
+</style><style>/*__TEMA__*/</style></head>
+<body>
+<div id="bg"><div id="grid"></div><div class="glow" id="g1"></div><div class="glow" id="g2"></div><div id="vig"></div></div>
+<div id="stage">
+  <div id="tag" class="chip o"></div>
+  <div id="cap"></div>
+  <div id="vis"></div>
+</div>
+<script>
+
+/*__CODIGO__*/
+
+/* ---------------- MOTOR ---------------- */
+let K=0,CS=.3,DUR=3,DD=3,FACT=1,cur=null;
+const SBK=k=>(window.SUBS&&SUBS[k]&&SUBS[k].length)?SUBS[k]:null;
+const W=i=>{const s=SBK(K);if(s)return s[Math.min(i,s.length-1)][1]*FACT;return .12+i*CS};
+function subHTML(sb){const n=sb[sb.length-1][3]+1;let h="";for(let c=0;c<n;c++)h+=`<div class="ch" data-c="${c}">`+sb.map((w,i)=>w[3]===c?`<span class="sw" data-i="${i}">${w[0]}</span>`:"").join("")+"</div>";return h}
+function subUpd(t){const sb=SBK(K);const cs=[...document.querySelectorAll("#cap .ch")];let ac=0;sb.forEach(w=>{if(t>=w[1]-.08)ac=Math.max(ac,w[3])});
+ const c0=sb.find(w=>w[3]===ac)[1];let aw=-1;sb.forEach((w,i)=>{if(w[3]===ac&&t>=w[1]-.03)aw=i});
+ cs.forEach((el,c)=>{if(c!==ac){el.style.display="none";return}el.style.display="block";const p=ac===0?1:P(t,c0-.08,.14,EZ.out);el.style.opacity=p;el.style.transform=`translateY(${(1-p)*26}px) scale(${.96+.04*p})`});
+ document.querySelectorAll("#cap .sw").forEach(el=>{const i=+el.dataset.i;const on=i===aw;el.style.color=on?"var(--or)":"#fff";const q=on?P(t,sb[i][1]-.03,.09,EZ.out):0;el.style.transform=`scale(${1+.05*q})`})}
+const durOf=s=>{const n=s.cap.split(/\s+/).length;return s.dur||Math.min(5,Math.max(3,1+n*.29))};
+const DESIGN=S.map(durOf);const DURS=window.OVR||DESIGN;const STARTS=DURS.map((d,i)=>DURS.slice(0,i).reduce((a,b)=>a+b,0));
+function capHTML(txt){let on=false;return txt.split(/\s+/).map(tok=>{let w=tok;let st=false,en=false;if(w.startsWith('*')){on=true;w=w.slice(1)}if(w.endsWith('*')){en=true;w=w.slice(0,-1)}else if(/\*[.,?!:]$/.test(w)){en=true;w=w.replace(/\*([.,?!:])$/,'$1')}
+  const h=`<span class="w${on?' h':''}">${w}</span>`;if(en)on=false;return h}).join(' ')}
+function setScene(k){K=k;cur=S[k];DUR=DURS[k];DD=DESIGN[k];FACT=DD/DUR;const n=cur.cap.split(/\s+/).length;CS=Math.min(.3,(DD*.62)/n);
+  const cap=$('#cap');const SB=SBK(k);cap.className=SB?'subs':'';cap.innerHTML=SB?subHTML(SB):capHTML(cur.cap);cap.style.fontSize=(SB?94:(n<=6?96:n<=9?86:n<=12?76:70))+'px';
+  $('#tag').textContent=cur.tag||'';$('#tag').style.display=cur.tag?'inline-flex':'none';$('#vis').innerHTML=cur.html();window.SHK=0;setTime(0);return DUR}
+function setTime(t){const gt=STARTS[K]+t;
+  $('#g1').style.transform=`translate(${180+160*Math.sin(gt*.27)}px,${-520+140*Math.cos(gt*.21)}px)`;
+  $('#g2').style.transform=`translate(${-420+140*Math.cos(gt*.19)}px,${900+160*Math.sin(gt*.23)}px)`;
+  $('#grid').style.transform=`translate(${(gt*9)%90}px,${(gt*14)%90}px)`;
+  const tt=t*FACT;window.SHK=0;cur.up(tt);
+  if(SBK(K))subUpd(t);const words=[...document.querySelectorAll('#cap .w')];words.forEach((el,i)=>{const p=P(tt,(cur.wt?cur.wt(i):W(i))-.02,.22,EZ.out);el.style.opacity=p;el.style.transform=`translateY(${(1-p)*36}px)`});
+  const tg=P(tt,0,.25);$('#tag').style.opacity=tg;
+  const ent=P(t,0,.18);const push=1+.022*(t/DUR);const sx=Math.sin(t*93)*(window.SHK||0),sy=Math.cos(t*71)*(window.SHK||0);
+  $('#stage').style.transform=`translate(${sx}px,${sy}px) scale(${push+(1-ent)*.035})`;$('#stage').style.opacity=.25+.75*ent}
+window.INFO={n:S.length,durs:DURS};
+</script></body></html>

@@ -1,0 +1,54 @@
+{
+  "numero": 1,
+  "titulo": "A geladeira cheia",
+  "palavra": "CARDÁPIO",
+  "entrega": "o modelo de cardápio que a Lu manda no direct",
+  "cenas": [
+    {
+      "fala": "A Lu vendeu trinta e sete bolos num sábado.",
+      "tela": "A Lu vendeu 37 bolos num sábado."
+    },
+    {
+      "fala": "Sem gastar um real de anúncio."
+    },
+    {
+      "fala": "Três meses antes, a geladeira dela tava cheia de bolo e o celular, mudo."
+    },
+    {
+      "fala": "A Dona Neide, a mãe dela, já falava em vender a batedeira."
+    },
+    {
+      "fala": "Aí a Lu mudou uma coisa só. Parou de postar foto de bolo pronto."
+    },
+    {
+      "fala": "E começou a mostrar o bastidor. A massa, o forno, a entrega."
+    },
+    {
+      "fala": "O Rafa, o irmão, filmava tudo com o celular na mão."
+    },
+    {
+      "fala": "No primeiro vídeo, cento e vinte comentários.",
+      "tela": "No primeiro vídeo, 120 comentários."
+    },
+    {
+      "fala": "E todo mundo perguntando a mesma coisa: quanto custa?"
+    },
+    {
+      "fala": "A Lu respondeu com um cardápio no direct. Foto, sabor e preço."
+    },
+    {
+      "fala": "Em uma semana, a agenda de sábado lotou."
+    },
+    {
+      "fala": "A Dona Neide parou de falar da batedeira. Agora ela cuida do caixa."
+    },
+    {
+      "fala": "Comenta cardápio, que eu te mando no direct, o modelo de cardápio que a Lu usa.",
+      "tela": "Comenta CARDÁPIO, que eu te mando no direct, o modelo de cardápio que a Lu usa."
+    },
+    {
+      "fala": "No próximo capítulo, chega uma encomenda de duzentos docinhos. Pra amanhã.",
+      "tela": "No próximo capítulo, chega uma encomenda de 200 docinhos. Pra amanhã."
+    }
+  ]
+}
